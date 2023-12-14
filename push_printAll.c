@@ -8,15 +8,15 @@
 
 void to_push(stack_t **head, unsigned int counter)
 {
-	int n, j = 0, flag = 0;
+	int number, count= 0, flag = 0;
 
-	if (bus.arg)
+	if (bus.arg)/*to check if bus.arg is not NULL*/
 	{
 		if (bus.arg[0] == '-')
-			j++;
-		for (; bus.arg[j] != '\0'; j++)
+			count++;
+		for (; bus.arg[count] != '\0'; count++)
 		{
-			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+			if (bus.arg[count] > 57 || bus.arg[count] < 48)/*to check if bus.arg is out of range of char,'0'is 48, '9'is 57*/
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
@@ -30,11 +30,11 @@ void to_push(stack_t **head, unsigned int counter)
 		free(bus.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	n = atoi(bus.arg);
+	number = atoi(bus.arg);/*to convert the char into integer*/
 	if (bus.lifi == 0)
-		addnode(head, n);
+		addnode(head, number);
 	else
-		addqueue(head, n);
+		addqueue(head, number);
 }
 
 /**
@@ -46,16 +46,16 @@ void to_push(stack_t **head, unsigned int counter)
 
 void print_all(stack_t **head, unsigned int counter)
 {
-	stack_t *h;
+	stack_t *temp;/*temporal pointer to transverse through the loop*/
 	(void)counter;
 
-	h = *head;
-	if (h == NULL)
+	temp = *head;
+	if (temp == NULL)
 		return;
-	while (h)
+	while (temp != NULL)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%d\n", temp->n);
+		temp = temp->next;
 	}
 }
 
