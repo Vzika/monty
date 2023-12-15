@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * addqueue - add node to the tail stack
+ * addqueue -function to add node to the tail stack
  * @n: new_value
  * @head: head of the stack
  * Return: no return
@@ -36,12 +36,12 @@ void addqueue(stack_t **head, int n)
 }
 
 /**
- * f_queue - prints the top
+ * queue_func -sets the format of the data to a queue
  * @head: stack head
  * @counter: line_number
  * Return: no return
 */
-void f_queue(stack_t **head, unsigned int counter)
+void queue_func(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;

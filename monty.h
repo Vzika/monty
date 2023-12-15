@@ -73,5 +73,11 @@ void subtraction(stack_t **head, unsigned int counter);
 void division(stack_t **head, unsigned int counter);
 void multiplication(stack_t **head, unsigned int counter);
 void modulus(stack_t **head, unsigned int counter);
+void put_char(stack_t **head, unsigned int counter);
+void print_string(stack_t **head, unsigned int counter);
+void rotate_top(stack_t **head,  __attribute__((unused)) unsigned int counter);
+void rotate_botom(stack_t **head, __attribute__((unused)) unsigned int counter);
+void stack_func(stack_t **head, unsigned int counter);
+void queue_func(stack_t **head, unsigned int counter);          
 #endif
 

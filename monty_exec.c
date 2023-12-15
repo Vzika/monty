@@ -20,6 +20,12 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 				{"div", division},
 				{"mul", multiplication},
 				{"mod", modulus},
+				{"pchar",put_char},
+				{"pstr",print_string},
+				{"rotl",rotate_top},
+				{"rotr",rotate_botom},
+				{"stack",stack_func},
+				{"queue",queue_func},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
